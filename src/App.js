@@ -10,7 +10,6 @@ function App() {
   
   const [perData , setPerData] = useState(personsData);
 
-  console.log(perData);
   
   const showData = () =>{
     setPerData(personsData);
