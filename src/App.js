@@ -4,7 +4,7 @@ import Title from './components/Tiltle';
 import Content from './components/Contnt';
 import Buttons from './components/Buttons';
 import { personsData } from './components/data';
-import {  useState } from 'react';
+import {  useEffect, useState } from 'react';
 
 function App() {
 
@@ -18,6 +18,10 @@ function App() {
     setPerData([]);
   }
 
+  useEffect(()=>{
+    setPerData([]);
+    console.log(perData);
+  },[])
 
   return (
     <div className="App">
