@@ -7,9 +7,11 @@ import { personsData } from './components/data';
 import {  useEffect, useState } from 'react';
 
 function App() {
-
+  
   const [perData , setPerData] = useState(personsData);
 
+  console.log(perData);
+  
   const showData = () =>{
     setPerData(personsData);
   }
@@ -20,14 +22,13 @@ function App() {
 
   useEffect(()=>{
     setPerData([]);
-    console.log(perData);
   },[])
 
   return (
     <div className="App">
       <Container>
-        <Title person={personsData}/>
-        <Content perData={personsData} />
+        <Title person={perData}/>
+        <Content perData={perData} />
         <Buttons showData={showData} deleteData={deleteData} />
       </Container>
     </div>
